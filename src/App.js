@@ -6,7 +6,8 @@ function App() {
   return (
     <div className="App">
       <NavBar/>
-      <Timeline/>
+      <Timeline visibility={false} value={"Flower Arrangement"} color={"text-red-600"} size={"text-2xl"} />
+      <Timeline visibility={true} value={"Dec 5, 2024 at 8:00-10:00 AM"} size={"text-base"}/>
     </div>
   );
 }

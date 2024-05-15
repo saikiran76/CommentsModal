@@ -1,7 +1,7 @@
 import { IoMdArrowDropdown } from "react-icons/io";
 import { Text } from "./Italic";
 import { CiUser } from "react-icons/ci";
-import { FaRegStickyNote } from "react-icons/fa";
+
 
 const Assign = () =>{
     return(
@@ -21,9 +21,6 @@ const Assign = () =>{
                 <div className="cursor-pointer"><IoMdArrowDropdown/></div>
             </div>
 
-
-            <Text text="Note" icon={FaRegStickyNote}/>
-            
 
         </div>
 

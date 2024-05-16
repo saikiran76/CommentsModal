@@ -11,6 +11,7 @@ import { addComment } from "../utils/commentSlice";
 const Comments = () =>{
     const dispatch = useDispatch();
     const comments = useSelector(store => store.comments.comments)
+    const users = useSelector(store => store.user.user)
 
     const [input, setInput] = useState("");
     return(
@@ -19,7 +20,7 @@ const Comments = () =>{
             {/* <Comment name={"Jane"} comment={"Thanks for assigning"}/> */}
             {
                 comments.map((item, index)=>(
-                <Comment key={index} name={"Jane"} comment={item}/>
+                <Comment key={index} name={users[users.length-1]} comment={item}/>
                 ))
             }
             <div className="send flex gap-4 items-center m-2">

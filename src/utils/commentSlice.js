@@ -2,16 +2,19 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const commentSlice = createSlice({
     name: "comments",
-    initialState:{
+    initialState: {
         comments: []
     },
-    reducers:{
+    reducers: {
         addComment: (state, action) => {
-            // state = action.payload;
             state.comments.push(action.payload);
+        },
+        updateComment: (state, action) => {
+            const { index, text } = action.payload;
+            state.comments[index] = text;
         }
     }
-})
+});
 
-export const {addComment} = commentSlice.actions;
+export const { addComment, updateComment } = commentSlice.actions;
 export default commentSlice.reducer;

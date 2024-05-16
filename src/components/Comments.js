@@ -15,7 +15,7 @@ const Comments = () =>{
 
     const [input, setInput] = useState("");
     return(
-        <div className="m-6">
+        <div className="m-6 font-inter">
             <Text text="Comments" weight={"font-bold"} icon={""}/>
             {/* <Comment name={"Jane"} comment={"Thanks for assigning"}/> */}
             {
@@ -23,7 +23,7 @@ const Comments = () =>{
                 <Comment key={index} name={users[users.length-1]} comment={item}/>
                 ))
             }
-            <div className="send flex gap-4 items-center m-2">
+            <div className="send flex gap-4 items-center m-2 Inter">
                 <Image width="w-[10%]"/>
                 <div className={`flex items-center rounded-[3em] ${border}`}>
                     <input className={`p-4 text-gray-300 `} placeholder="Write a comment..."
@@ -33,7 +33,7 @@ const Comments = () =>{
                     }}
                     />
 
-                    <div className="m-2 cursor-pointer" onClick={()=> dispatch(addComment(input))}><IoMdSend/></div>
+                    <div className="m-4 cursor-pointer" onClick={()=> dispatch(addComment(input))}><IoMdSend/></div>
                 </div>
             </div>
         </div>

@@ -7,8 +7,6 @@ import { useDispatch } from "react-redux";
 import { addUser } from "../utils/userSlice";
 
 
-
-
 const Assign = () =>{
     const dispatch = useDispatch();
 
@@ -24,7 +22,7 @@ const Assign = () =>{
             
             <div className="rounded-[3rem] border-gray-300 border-l border-r border-t border-b p-2 flex items-center w-[12em] text-green-400">
                 <Image/>
-                <select onChange={(e)=>{
+                <select className="mx-4" onChange={(e)=>{
                     handleUserChange(e.target.value)
                 }}>
                     {Assignes.map((item, index)=>(
